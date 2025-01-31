@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const { ObjectId } = require("mongodb");
 const port = process.env.PORT || 9000;
 const app = express();
-const cors = require("cors");
+
 const corsOptions = {
   origin: [
     "http://localhost:5173",
