@@ -13,6 +13,8 @@ const corsOptions = {
     "http://localhost:5173",
     "http://localhost:5174",
     "http://squaresmfl.netlify.app",
+    "https://test-982fe.web.app",
+    "https://test-982fe.firebaseapp.com",
   ],
 };
 app.use(cors(corsOptions));
