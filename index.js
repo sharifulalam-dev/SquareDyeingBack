@@ -12,7 +12,7 @@ const corsOptions = {
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "http://squaresmfl.netlify.app",
+    "https://squaresmfl.netlify.app",
     "https://square-58bac.web.app",
     "https://square-58bac.firebaseapp.com",
   ],
@@ -20,6 +20,11 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"],
   optionsSuccessStatus: 200, // For legacy browsers
 };
+
+app.use((req, res, next) => {
+  console.log("CORS request from:", req.headers.origin);
+  next();
+});
 app.use(cors(corsOptions));
 
 app.use(express.json());
