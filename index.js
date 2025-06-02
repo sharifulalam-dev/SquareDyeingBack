@@ -16,6 +16,9 @@ const corsOptions = {
     "https://square-58bac.web.app",
     "https://square-58bac.firebaseapp.com",
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 200, // For legacy browsers
 };
 app.use(cors(corsOptions));
 
